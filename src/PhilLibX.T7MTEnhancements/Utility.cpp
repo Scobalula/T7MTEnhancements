@@ -60,6 +60,7 @@ uint32_t Utility::ExtractHashFromString(const char* input)
         RemoveInString(value, value.find("hash_"), 5);
         RemoveInString(value, value.find("function_"), 9);
         RemoveInString(value, value.find("namespace_"), 10);
+        RemoveInString(value, value.find("class_"), 6);
 
         return std::strtoul(value.c_str(), 0, 16);
     }

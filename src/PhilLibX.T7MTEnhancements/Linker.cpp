@@ -365,7 +365,7 @@ int _fastcall Linker::ComputeFNVHashOverride(char* input)
     auto value = std::string(input);
 
     // See if we have a hash value from Cerberus
-    if (value.find("function_") == 0 || value.find("namespace_") == 0 || value.find("var_") == 0 || value.find("hash_") == 0)
+    if (value.find("function_") == 0 || value.find("namespace_") == 0 || value.find("var_") == 0 || value.find("hash_") == 0 || value.find("class_") == 0)
     {
         auto hashValue = Utility::ExtractHashFromString(value.data());
 
